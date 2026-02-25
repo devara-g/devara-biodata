@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEVARRA.SYS | Muhammad Devara - Backend Architect</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition" id="pageTransition">
+      <div class="transition-scanline"></div>
+      <div class="transition-text">DEVARRA.B-END</div>
+      <div class="transition-bar"></div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <i class="fas fa-microchip"></i>
+          <span>DEVARRA.SYS</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="#about" class="nav-link"
+            ><span class="slash">//</span> ABOUT</a
+          >
+          <a href="#stack" class="nav-link"
+            ><span class="slash">//</span> STACK</a
+          >
+          <a href="#projects" class="nav-link"
+            ><span class="slash">//</span> PROJECTS</a
+          >
+          <a href="#contact" class="nav-link"
+            ><span class="slash">//</span> CONTACT</a
+          >
+        </div>
+        <a href="#contact" class="nav-cta">
+          INTERCEPT <i class="fas fa-chevron-right"></i>
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mobile-link"
+        ><span class="slash">//</span> ABOUT</a
+      >
+      <a href="#stack" class="mobile-link"
+        ><span class="slash">//</span> STACK</a
+      >
+      <a href="#projects" class="mobile-link"
+        ><span class="slash">//</span> PROJECTS</a
+      >
+      <a href="#contact" class="mobile-link"
+        ><span class="slash">//</span> CONTACT</a
+      >
+      <a href="#contact" class="mobile-cta">
+        INTERCEPT <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span class="status-text">SYSTEM ONLINE AVAILABLE FOR HIRE</span>
+          </div>
+          <h1 class="hero-name">
+            <span class="name-outline">MUHAMMAD</span>
+            <span class="name-solid">DEVARA</span>
+          </h1>
+          <div class="hero-role">
+            <span class="bracket">&lt;</span
+            ><span id="typewriterText" class="typewriter-text"></span
+            ><span class="typewriter-cursor">_</span
+            ><span class="bracket">/&gt;</span>
+          </div>
+          <p class="hero-desc">
+            Engineering scalable server-side infrastructure and high-performance
+            digital neural networks.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span class="btn-text">ACCESS_PROJECTS</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span class="btn-text">CONTACT_ME</span>
+            </a>
+          </div>
+
+          <!-- Code Card -->
+          <div class="code-card">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="code-title">dev_profile.json</span>
+            </div>
+            <div class="code-content">
+              <div class="code-line">
+                <span class="line-num">1</span>
+                <span class="code-text"
+                  ><span class="code-key">"name"</span>:
+                  <span class="code-str">"Muhammad Devara"</span>,</span
+                >
+              </div>
+              <div class="code-line">
+                <span class="line-num">2</span>
+                <span class="code-text"
+                  ><span class="code-key">"role"</span>:
+                  <span class="code-str"
+                    >"Full Stack Developer / Backend Specialist"</span
+                  >,</span
+                >
+              </div>
+              <div class="code-line">
+                <span class="line-num">3</span>
+                <span class="code-text"
+                  ><span class="code-key">"passion"</span>:
+                  <span class="code-str"
+                    >"Distributed systems, cloud computing, and clean code
+                    architecture"</span
+                  >,</span
+                >
+              </div>
+              <div class="code-line">
+                <span class="line-num">4</span>
+                <span class="code-text"
+                  ><span class="code-key">"status"</span>:
+                  <span class="code-str">"Open for collaborations"</span></span
+                >
+              </div>
+              <div class="code-line">
+                <span class="line-num">5</span>
+                <span class="code-text"
+                  ><span class="code-comment"
+                    >// Initializing Portfolio v2.0...</span
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="image-container">
+            <div class="image-frame">
+              <div class="profile-placeholder">
+                <img src="assets/siganteng.jpg" alt="profile" />
+              </div>
+              <div class="image-overlay"></div>
+            </div>
+            <div class="image-status">
+              <span class="status-indicator"></span>
+              <span class="status-label">Optimizing API Latency...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <!-- About / Data Log Section -->
+    <section class="about" id="about">
+      <div class="section-container">
+        <div class="about-grid">
+          <div class="about-left">
+            <h2 class="section-title">
+              <span class="section-num">01.</span> DATA_LOG
+            </h2>
+            <p class="about-text">
+              Saya seorang Junior Backend Programmer yang lagi mendalami seluk-beluk manajemen database, pengembangan API, dan arsitektur sistem.
+              Saya senang ngulik puzzle algoritma dan mengoptimalkan kode supaya performanya makin ngebut dan efisien.
+              Tujuan saya adalah membangun “mesin-mesin tak terlihat” yang jadi tenaga di balik dunia digital modern
+            </p>
+            <div class="about-cards">
+              <div class="about-card">
+                <div class="card-icon">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <h3 class="card-title">API PROTOCOLS</h3>
+                <p class="card-subtitle">RESTful & GraphQL</p>
+              </div>
+              <div class="about-card">
+                <div class="card-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <h3 class="card-title">DATA CORE</h3>
+                <p class="card-subtitle">SQL & NoSQL</p>
+              </div>
+              <div class="about-card">
+                <div class="card-icon">
+                  <i class="fas fa-server"></i>
+                </div>
+                <h3 class="card-title">DEPLOYMENT</h3>
+                <p class="card-subtitle">Docker & CI/CD</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-right">
+            <h3 class="metrics-title">
+              <i class="fas fa-chart-line"></i> PROFICIENCY_METRICS
+            </h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name"
+                    >Backend Dev (Node.js/PHP/LARAVEL)</span
+                  >
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Database Management</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Cloud Services</span>
+                  <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Arsenal Section -->
+    <section class="tech-stack" id="stack">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title center">
+            <span class="section-num">02.</span> TECH_ARSENAL
+          </h2>
+          <p class="section-subtitle">
+            Tools and modules loaded for development operations.
+          </p>
+        </div>
+        <div class="tech-slider">
+          <div class="tech-track">
+            <!-- First Set -->
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-html5"></i></div>
+              <span class="tech-name">HTML5</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+              <span class="tech-name">CSS3</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-bootstrap"></i></div>
+              <span class="tech-name">BOOTSTRAP</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-wind"></i></div>
+              <span class="tech-name">TAILWIND</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-js"></i></div>
+              <span class="tech-name">JAVASCRIPT</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-php"></i></div>
+              <span class="tech-name">PHP</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+              <span class="tech-name">NODE.JS</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-code"></i></div>
+              <span class="tech-name">EXPRESS</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-database"></i></div>
+              <span class="tech-name">MYSQL</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-docker"></i></div>
+              <span class="tech-name">DOCKER</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+              <span class="tech-name">GIT</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-github"></i></div>
+              <span class="tech-name">GITHUB</span>
+            </div>
+
+            <!-- Duplicated Set for Seamless Loop -->
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-html5"></i></div>
+              <span class="tech-name">HTML5</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+              <span class="tech-name">CSS3</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-bootstrap"></i></div>
+              <span class="tech-name">BOOTSTRAP</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-wind"></i></div>
+              <span class="tech-name">TAILWIND</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-js"></i></div>
+              <span class="tech-name">JAVASCRIPT</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-php"></i></div>
+              <span class="tech-name">PHP</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+              <span class="tech-name">NODE.JS</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-code"></i></div>
+              <span class="tech-name">EXPRESS</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-database"></i></div>
+              <span class="tech-name">POSTGRESQL</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-docker"></i></div>
+              <span class="tech-name">DOCKER</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+              <span class="tech-name">GIT</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-github"></i></div>
+              <span class="tech-name">GITHUB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="section-container">
+        <div class="section-header-row">
+          <h2 class="section-title">
+            <span class="section-num">03.</span> DEPLOYED_SYSTEMS
+          </h2>
+          <a href="https://github.com/devara-g" class="view-all-link">
+            [ VIEW_ALL_REPOS ] <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+        <p class="projects-subtitle">
+          Architectural blueprints and executed codebases.
+        </p>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/kelas.png" alt="Class Management System">
+              <div class="project-tags">
+                <span class="tag tag-blue">PHP</span>
+                <span class="tag tag-purple">MYSQL</span>
+                <span class="tag tag-green">BOOTSTRAP</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">CLASS_MANAGEMENT</h3>
+              <p class="project-desc">
+                Integrated platform for educational resource management and student tracking.
+              </p>
+              <div class="project-actions">
+                <a href="pplg1.wuaze.com" class="project-link primary">
+                  <i class="fas fa-external-link-alt"></i> SEE_WEBSITE
+                </a>
+                <a href="https://github.com/devara-g/class-information-website" class="project-link">
+                  <i class="fas fa-code"></i> VIEW_SOURCE
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/p3.png" alt="P3 Portal">
+              <div class="project-tags">
+                <span class="tag tag-blue">LARAVEL</span>
+                <span class="tag tag-purple">TAILWIND</span>
+                <span class="tag tag-green">POSTGRES</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">P3_PORTAL_SYSTEM</h3>
+              <p class="project-desc">
+                Enterprise-grade portal for internal operations and synchronized data management.
+              </p>
+              <div class="project-actions">
+                <a href="p3test.free.nf" class="project-link primary">
+                  <i class="fas fa-external-link-alt"></i> SEE_WEBSITE
+                </a>
+                <a href="https://github.com/devara-g/information-p3-website" class="project-link">
+                  <i class="fas fa-code"></i> VIEW_SOURCE
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/sbadmin.png" alt="SB Admin Dashboard">
+              <div class="project-tags">
+                <span class="tag tag-blue">VANILLA_JS</span>
+                <span class="tag tag-purple">BOOTSTRAP</span>
+                <span class="tag tag-green">DASHBOARD</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">ADMIN_CONTROL_CENTER</h3>
+              <p class="project-desc">
+                Comprehensive administrative dashboard with real-time statistics and data visualization.
+              </p>
+              <div class="project-actions">
+                <a href="#" class="project-link primary">
+                  <i class="fas fa-external-link-alt"></i> SEE_WEBSITE
+                </a>
+                <a href="https://github.com/devara-g/crud-akademik" class="project-link">
+                  <i class="fas fa-code"></i> VIEW_SOURCE
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="section-container">
+        <div class="contact-grid">
+          <div class="contact-left">
+            <h2 class="section-title">
+              <span class="section-num">04.</span> ESTABLISH_UPLINK
+            </h2>
+            <p class="contact-text">
+              Signal strength is maximum. I am ready to receive your
+              transmission regarding new opportunities or collaborations.
+            </p>
+            <div class="social-links">
+              <a href="mailto:defarahermawan@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+                <span>defarahermawan@gmail.com</span>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>linkedin.com/in/devara</span>
+              </a>
+              <a href="https://github.com/devara-g" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>github.com/devara-g</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label class="form-label">
+                  <i class="fas fa-user"></i> USER_ID / NAME
+                </label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="nama anda"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <i class="fas fa-at"></i> COMMUNICATION_CHANNEL / EMAIL
+                </label>
+                <input
+                  type="email"
+                  class="form-input"
+                  placeholder="[EMAIL_ADDRESS]"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <i class="fas fa-comment"></i> DATA_PACKET / MESSAGE
+                </label>
+                <textarea
+                  class="form-textarea"
+                  placeholder="tulis pesan anda..."
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                TRANSMIT_DATA <i class="fas fa-chevron-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <span class="footer-logo">
+              <i class="fas fa-microchip"></i> DEVARRA.SYS
+            </span>
+            <span class="footer-divider">|</span>
+            <span class="footer-text">SYSTEM OPERATIONAL</span>
+          </div>
+          <div class="footer-right">
+            <span class="footer-copyright"
+              >© 2026 MUHAMMAD DEVARA. ALL RIGHTS RESERVED.</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Background Music (taruh file mp3 di assets/music.mp3) -->
+    <audio id="bgMusic" loop preload="none">
+      <!-- Ganti src dengan path file mp3 kamu, contoh: assets/music.mp3 -->
+      <source src="assets/moveon.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Vinyl Music Player (Fixed Position) -->
+    <div
+      class="vinyl-player-fixed"
+      id="vinylPlayer"
+      title="Click to play music"
+    >
+      <div class="vinyl-disc" id="vinylDisc">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <circle
+            cx="40"
+            cy="40"
+            r="38"
+            fill="#111"
+            stroke="#1a1a1a"
+            stroke-width="1"
+          />
+          <circle
+            cx="40"
+            cy="40"
+            r="34"
+            fill="none"
+            stroke="#222"
+            stroke-width="0.5"
+          />
+          <circle
+            cx="40"
+            cy="40"
+            r="30"
+            fill="none"
+            stroke="#1e1e1e"
+            stroke-width="0.5"
+          />
+          <circle
+            cx="40"
+            cy="40"
+            r="26"
+            fill="none"
+            stroke="#222"
+            stroke-width="0.5"
+          />
+          <circle
+            cx="40"
+            cy="40"
+            r="22"
+            fill="none"
+            stroke="#1e1e1e"
+            stroke-width="0.5"
+          />
+          <circle
+            cx="40"
+            cy="40"
+            r="14"
+            fill="#0a0a0a"
+            stroke="#00d4ff"
+            stroke-width="1"
+          />
+          <circle cx="40" cy="40" r="10" fill="#0d0d0d" />
+          <path
+            d="M 40 26 A 14 14 0 0 1 54 40"
+            fill="none"
+            stroke="#00d4ff"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <circle cx="40" cy="40" r="2.5" fill="#00d4ff" opacity="0.8" />
+        </svg>
+      </div>
+      <div class="vinyl-info">
+        <div class="vinyl-tooltip" id="vinylTooltip">
+          <i class="fas fa-music" id="vinylIcon"></i>
+          <span class="vinyl-title" id="vinylTitle">SONGS — PLAY</span>
+        </div>
+        <button class="music-next-btn" id="nextMusicBtn" title="Next Song">
+          <i class="fas fa-step-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
