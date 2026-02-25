@@ -1,6 +1,6 @@
 /* ========================================
    DEVARRA.SYS - Portfolio Styles
-   Cyberpunk/Tech Theme
+   Cyberpunk/Tech Theme with Aurora Effect
    ======================================== */
 
 /* CSS Variables */
@@ -379,7 +379,7 @@ a {
 }
 
 /* ========================================
-   HERO SECTION
+   HERO SECTION WITH AURORA BACKGROUND
    ======================================== */
 .hero {
   min-height: 100vh;
@@ -390,6 +390,42 @@ a {
   overflow: hidden;
 }
 
+/* Aurora Background Effect - Main Layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  background: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 212, 255, 0.2), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(168, 85, 247, 0.15), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 20% 80%, rgba(0, 100, 255, 0.12), transparent 50%);
+  filter: blur(80px);
+  z-index: 0;
+  animation: auroraMove 20s ease-in-out infinite;
+}
+
+@keyframes auroraMove {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-40px) scale(1.1) rotate(2deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-20px) scale(0.95) rotate(-1deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-30px) scale(1.05) rotate(1deg);
+    opacity: 0.85;
+  }
+}
+
 .hero-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -398,19 +434,49 @@ a {
   gap: 4rem;
   align-items: center;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
+/* Aurora Glow - Secondary Layer */
 .hero-glow {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%);
-  opacity: 0.1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 100% 70% at 15% 20%, rgba(0, 212, 255, 0.12), transparent 55%),
+    radial-gradient(ellipse 100% 70% at 85% 80%, rgba(168, 85, 247, 0.12), transparent 55%),
+    radial-gradient(ellipse 90% 90% at 50% 110%, rgba(0, 100, 255, 0.08), transparent 65%),
+    radial-gradient(circle at 30% 40%, rgba(138, 43, 226, 0.08), transparent 45%);
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
+  animation: auroraGlow 25s ease-in-out infinite;
+  filter: blur(100px);
+}
+
+@keyframes auroraGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 0.7;
+    transform: scale(1.05) translateY(-20px);
+  }
+  40% {
+    opacity: 0.6;
+    transform: scale(0.98) translateY(-10px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: scale(1.03) translateY(-30px);
+  }
+  80% {
+    opacity: 0.65;
+    transform: scale(0.97) translateY(-15px);
+  }
 }
 
 /* Status Badge */
@@ -594,6 +660,7 @@ a {
   padding: 1rem;
   font-family: var(--font-mono);
   font-size: 0.8rem;
+  text-align: left;
 }
 
 .code-line {
