@@ -27,11 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // VINYL MUSIC PLAYER (Multi-track)
   // ========================================
   const playlist = [
-    {
-      name: "The Man Who Can't Be Moved — The Script",
-      src: "assets/moveon.mp3",
-    },
     { name: "Love Me Not — Ravyn Lenae", src: "assets/lovemenot.mp3" },
+    { name: "The Man Who Can't Be Moved — The Script", src: "assets/moveon.mp3" },
+    { name: "Tante — Unknown", src: "assets/tante.mp3" },
   ];
   let currentTrack = 0;
   let isPlaying = false;

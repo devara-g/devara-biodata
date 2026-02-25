@@ -879,40 +879,54 @@ a {
    ======================================== */
 .tech-stack {
   background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 3rem;
+/* Background Grid Pattern */
+.tech-stack::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
 }
 
 .tech-slider {
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding: 1rem 0;
-  /* Fade mask effect for corners */
+  padding: 4rem 0;
+  /* Stronger fade mask */
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 10%,
-    black 90%,
+    black 15%,
+    black 85%,
     transparent
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
-    black 10%,
-    black 90%,
+    black 15%,
+    black 85%,
     transparent
   );
 }
 
 .tech-track {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   width: max-content;
-  animation: techScroll 40s linear infinite;
+  animation: techScroll 35s linear infinite;
+  padding: 0 1.5rem;
 }
 
 .tech-track:hover {
@@ -924,48 +938,121 @@ a {
     transform: translateX(0);
   }
   100% {
-    /* Move by exactly half the track width (one complete set of icons) */
-    transform: translateX(calc(-50% - 1rem));
+    transform: translateX(calc(-50% - 1.5rem));
   }
 }
 
 .tech-item {
   flex-shrink: 0;
-  width: 200px;
+  width: 180px;
+  height: 220px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  transition: var(--transition-fast);
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(15, 15, 25, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+}
+
+/* Corner Accents */
+.tech-item::before,
+.tech-item::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--cyan);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.tech-item::before {
+  top: 0;
+  left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+.tech-item::after {
+  bottom: 0;
+  right: 0;
+  border-left: 0;
+  border-top: 0;
+}
+
+/* Scanline Effect */
+.tech-item .scanline {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 212, 255, 0.05),
+    transparent
+  );
+  animation: diagnosticScan 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes diagnosticScan {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
 }
 
 .tech-item:hover {
+  transform: translateY(-15px) scale(1.05);
   border-color: var(--cyan);
   background: rgba(0, 212, 255, 0.05);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px var(--cyan-glow);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.tech-item:hover::before,
+.tech-item:hover::after {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
 }
 
 .tech-icon {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--cyan);
-  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+  transition: all 0.4s ease;
+  z-index: 2;
 }
 
 .tech-item:hover .tech-icon {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px var(--cyan-glow));
 }
 
 .tech-name {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
   color: var(--text-secondary);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.tech-item:hover .tech-name {
+  color: var(--cyan);
 }
 
 /* ========================================
